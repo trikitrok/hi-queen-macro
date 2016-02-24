@@ -1,7 +1,10 @@
 (ns hi-queen.core)
 
+(defn hi-queen [introduction]
+  (str introduction ", so please your Majesty"))
+
 (defn alice-hi-queen []
-  "My name is Alice, so please your Majesty")
+  (hi-queen "My name is Alice"))
 
 (defn march-hare-hi-queen []
-  "My name is March Hare, so please your Majesty")
+  (hi-queen "My name is March Hare"))
