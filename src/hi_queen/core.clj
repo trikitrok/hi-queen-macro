@@ -10,10 +10,9 @@
   (str introduction ", so please your Majesty"))
 
 (defmacro def-hi-queen [name intro-formula]
-  (list 'defn
-        (symbol (hi-queen-fn-name name))
+  `(defn ~(symbol (hi-queen-fn-name name))
         []
-        (list 'hi-queen (str intro-formula " " name))))
+        (hi-queen ~(str intro-formula " " name))))
 
 (def-hi-queen "Alice" "My name is")
 (def-hi-queen "March Hare" "My name is")
