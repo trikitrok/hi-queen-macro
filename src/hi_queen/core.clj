@@ -2,7 +2,7 @@
 
 (defmacro def-hi-queen [name intro-formula]
   (list 'defn
-        (symbol (str (clojure.string/lower-case name) "-hi-queen"))
+        (symbol (str (clojure.string/lower-case (clojure.string/replace name #"\s" "-")) "-hi-queen"))
         []
         (list 'hi-queen (str intro-formula " " name))))
 
@@ -10,9 +10,7 @@
   (str introduction ", so please your Majesty"))
 
 (def-hi-queen "Alice" "My name is")
-
-(defn march-hare-hi-queen []
-  (hi-queen "My name is March Hare"))
+(def-hi-queen "March Hare" "My name is")
 
 (defn white-rabbit-hi-queen []
   (hi-queen "I'm the White Rabbit"))
