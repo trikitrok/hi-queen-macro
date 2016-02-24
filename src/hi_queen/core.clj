@@ -1,11 +1,17 @@
 (ns hi-queen.core)
 
+(defn hi-queen-fn-name [character-name]
+  (-> character-name
+      (clojure.string/replace #"\s" "-")
+      (clojure.string/lower-case)
+      (str "-hi-queen")))
+
 (defn hi-queen [introduction]
   (str introduction ", so please your Majesty"))
 
 (defmacro def-hi-queen [name intro-formula]
   (list 'defn
-        (symbol (str (clojure.string/lower-case (clojure.string/replace name #"\s" "-")) "-hi-queen"))
+        (symbol (hi-queen-fn-name name))
         []
         (list 'hi-queen (str intro-formula " " name))))
 
