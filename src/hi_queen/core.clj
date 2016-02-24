@@ -11,3 +11,6 @@
 
 (defn white-rabbit-hi-queen []
   (hi-queen "I'm the White Rabbit"))
+
+(defn mad-hatter-hi-queen []
+  (hi-queen "I'm the Mad Hatter"))

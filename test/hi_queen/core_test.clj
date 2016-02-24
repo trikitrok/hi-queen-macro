@@ -15,4 +15,8 @@
 
   (fact
     "White Rabbit says it"
-    (white-rabbit-hi-queen) => "I'm the White Rabbit, so please your Majesty"))
+    (white-rabbit-hi-queen) => "I'm the White Rabbit, so please your Majesty")
+
+  (fact
+    "Mad Hatter says it"
+    (mad-hatter-hi-queen) => "I'm the Mad Hatter, so please your Majesty"))
