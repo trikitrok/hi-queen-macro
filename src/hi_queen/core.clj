@@ -8,3 +8,6 @@
 
 (defn march-hare-hi-queen []
   (hi-queen "My name is March Hare"))
+
+(defn white-rabbit-hi-queen []
+  (hi-queen "I'm the White Rabbit"))
